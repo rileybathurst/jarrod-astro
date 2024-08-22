@@ -1,0 +1,148 @@
+/*------------------------------------*/
+/* #LINKS */
+/*------------------------------------*/
+
+a {
+  color: var(--pine-200);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--pine-200);
+  }
+}
+
+a:hover {
+  color: var(--pine-200);
+  text-decoration: none;
+  @media (prefers-color-scheme: dark) {
+    color: var(--pine-300);
+  }
+}
+
+button {
+  border: none;
+  background-color: var(--mercury);
+  font-size: var(--stevens);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  box-shadow: var(--troposphere);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--abscence-100);
+    box-shadow: var(--stratosphere);
+    color: var(--mercury);
+    border: 2px solid var(--abscence-200) !important;
+  }
+}
+
+/*------------------------------------*/
+
+.large_menu a {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: var(--hover-timing);
+  text-decoration: none;
+  color: hsl(var(--pine-hs), calc(var(--pine-l) - 5%));
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--prescence-200);
+  }
+}
+
+/* TODO: focus */
+.large_menu a:hover {
+  text-decoration: underline;
+  background-color: var(--silver);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl(var(--pine-hs), calc(var(--pine-l) - 13%));
+  }
+}
+
+/*------------------------------------*/
+
+/* ? are these links */
+header svg {
+  padding: 0.8rem;
+  border-radius: var(--tamarack);
+  transition: var(--hover-timing);
+}
+
+header svg:where(:hover, :focus) {
+  background-color: rgba(0, 0, 0, 0.5); /* TODO variable */
+}
+
+.page-title a {
+  padding-block: var(--tamarack);
+  box-shadow: var(--tamarack) 0 0 transparent,
+    calc(var(--tamarack) - var(--tamarack) * 2) 0 0 transparent;
+  transition: var(--hover-timing);
+  border-radius: var(--tamarack);
+  line-height: calc(var(--rose) + calc(var(--tamarack) * 2));
+
+  @media (min-width: 30rem) {
+    line-height: calc(var(--jobs) + calc(var(--tamarack) * 2));
+  }
+}
+
+.page-title a:where(:hover, :focus) {
+  background-color: var(--mercury);
+  box-shadow: var(--mesophere);
+
+  @media (prefers-color-scheme: dark) {
+    /* TODO this contrast is nowhere near strong enough */
+    background-color: hsl(var(--pine-hs), calc(var(--pine-l) - 16%));
+    box-shadow: var(--tamarack) 0 0
+        hsl(var(--pine-hs), calc(var(--pine-l) - 16%)),
+      calc(var(--tamarack) - var(--tamarack) * 2) 0 0
+        hsl(var(--pine-hs), calc(var(--pine-l) - 16%));
+  }
+}
+
+.footer__list a {
+  /* TODO: variable */
+  padding: 0.8rem;
+  border-radius: var(--tamarack);
+  transition: var(--hover-timing);
+}
+
+.footer__list a:where(:hover, :focus) {
+  background-color: var(--mercury);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl(var(--pine-hs), calc(var(--pine-l) - 16%));
+  }
+}
+
+.yelp__link:where(:hover, :focus) {
+  /* overwrite this is maybe fixeable */
+  background-color: transparent !important;
+}
+
+.yelp__link svg {
+  border-radius: var(--tamarack);
+  transition: var(--hover-timing);
+}
+
+.yelp__link svg:where(:hover, :focus) {
+  background-color: var(--mercury);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl(var(--pine-hs), calc(var(--pine-l) - 13%));
+  }
+}
+
+.footer__stripe a {
+  color: hsl(var(--pine-hs), calc(var(--pine-l) - 10%));
+  transition: var(--hover-timing);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--sunshine-100);
+  }
+}
+
+.footer__stripe a:hover {
+  color: var(--pine-100);
+  @media (prefers-color-scheme: dark) {
+    color: var(--abscene-200);
+  }
+}

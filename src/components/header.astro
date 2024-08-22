@@ -1,0 +1,107 @@
+---
+import Logo from '../images/logo.astro'
+import MenuList from './menu-list.astro'
+import { Meta } from './meta'
+import "../styles/app.css";
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{Meta.title}</title>
+	</head>
+  <body>
+    <header>
+      <h1 class="sr-only">
+        <a href="/">
+          {Meta.title}
+        </a>
+      </h1>
+      <!-- ! fix the height -->
+      <img
+      src="https://jarrodsemmenswindowcleaning.s3.us-west-1.amazonaws.com/adam-vradenburg-_gu7E90QChU-unsplash-compressed.jpg"
+      alt="pine tree forrest texture"
+      class="forrest"
+      />
+      <div class="header__container">
+        <a
+          href='/'
+          class="header__logo"
+          title={Meta.title}
+        >
+          <Logo />
+        </a>
+
+          <menu-button>
+            <template>
+              <button class="menu-button" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+              </button>
+            </template>
+          </menu-button>
+
+        <div id="menu-content" >
+          <MenuList />
+        </div>
+      
+      <script>
+        class MenuButton extends HTMLElement {
+          constructor() {
+            super();
+      
+            // Inject menu toggle button when JS runs.
+            this.appendChild(this.querySelector('template')!.content.cloneNode(true));
+            const btn = this.querySelector('button')!;
+      
+            // Hide menu (shown by default to support no-JS browsers).
+            const menu = document.getElementById('menu-content')!;
+            menu.hidden = true;
+            // Add "menu-content" class in JS to avoid covering content in non-JS browsers.
+            menu.classList.add('menu-content');
+      
+            /** Set whether the menu is currently expanded or collapsed. */
+            const setExpanded = (expand: boolean) => {
+              btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
+              menu.hidden = !expand;
+            };
+      
+            // Toggle menu visibility when the menu button is clicked.
+            btn.addEventListener('click', () => setExpanded(menu.hidden));
+      
+            // Hide menu button for large screens.
+            const handleViewports = (e: MediaQueryList | MediaQueryListEvent) => {
+              setExpanded(e.matches);
+              btn.hidden = e.matches;
+              
+            };
+
+            // ? check 50rem is correct
+            const mediaQueries = window.matchMedia('(min-width: 50rem)');
+            handleViewports(mediaQueries);
+            mediaQueries.addEventListener('change', handleViewports);
+          }
+        }
+        customElements.define('menu-button', MenuButton);
+      </script>
+
+        {/* // TODO: this needs the hover come out of the circle */}
+        <div class='cartoon__wrapper'>
+          <img
+          src="https://jarrodsemmenswindowcleaning.s3.us-west-1.amazonaws.com/stock-previews/AdobeStock_32749018_Preview-transparent.png"
+          alt="cartoon window cleaner"
+          class="cartoon"
+          />
+        </div>
+      </div>
+    </header>
+
+    <h3 class="page-title">
+      <a href={`tel:${Meta.phoneRaw}`}>
+        Call Today For A Free Estimate! {Meta.phoneFormatted}
+        <!-- {meta.phone} -->
+      </a>
+    </h3>

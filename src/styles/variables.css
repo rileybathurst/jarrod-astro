@@ -1,0 +1,90 @@
+/*------------------------------------*/
+/* #VARIABLES */
+/*------------------------------------*/
+
+:root {
+  /* only 2 have been used */
+  /* I normally use birds now */
+  /* --jupiter: 80rem; */
+  /* --saturn: 70rem; */
+  /* --uranus: 60rem; */
+  --neptune: 50rem;
+  /* --earth: 40rem; */
+  /* --venus: 30rem; */
+  /* --mars: 20rem; */
+  --mercury: 10rem;
+
+  /*------------------------------------*/
+  /* #COLOR */
+  /*------------------------------------*/
+
+  --pine-100: oklch(85% 0.075 150);
+  --pine-200: oklch(70% 0.095 150);
+  --pine-300: oklch(50% 0.125 150);
+
+  --sunshine-100: oklch(90% 0.065 80);
+  --sunshine-200: oklch(85% 0.12 80);
+  --sunshine-300: oklch(80% 0.15 80);
+  --sunshine-400: oklch(70% 0.2 70);
+
+  /*------------------------------------*/
+  /* #NEUTRALS */
+  /*------------------------------------*/
+  /* * Trying a new idea here */
+
+  --prescence-100: hsl(0, 0%, 97.5%);
+  --prescence-200: hsl(0, 0%, 87.5%);
+  --prescence-300: hsl(0, 0%, 80%);
+  --prescence-400: hsl(0, 0%, 75%);
+
+  --abscence-400: hsl(0, 0%, 25%);
+  --abscence-300: hsl(0, 0%, 20%);
+  --abscence-200: hsl(0, 0%, 12.5%);
+  --abscence-100: hsl(0, 0%, 2.5%);
+
+  /*------------------------------------*/
+  /* #TYPOGRAPHY */
+  /*------------------------------------*/
+
+  /* Tahoe peaks for typorgraphic scale */
+  --freel: 2.5rem; /* 40px */
+  --jobs: 2.0625rem; /* 33px */
+  --rose: 1.75rem; /* 28px */
+  --houghton: 1.4375rem; /* 23px */
+  --relay: 1.1875rem; /* 19px */
+  --stevens: 1rem; /* 16px */
+  --tamarack: 0.8125rem; /* 13px */
+
+  /*------------------------------------*/
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* TODO: make it something more exciting */
+  --font-serif: Georgia, serif;
+
+  /*------------------------------------*/
+  /* #LAYERS */
+  /*------------------------------------*/
+
+  /* forest layers for z-index */
+  /* https://en.wikipedia.org/wiki/Forest */
+  --floor: 1;
+  --understory: 2;
+  --canopy: 3;
+  --emergent: 4;
+
+  --hover-timing: 0.5s ease-in-out;
+
+  /*------------------------------------*/
+  /* #SHADOWS */
+  /*------------------------------------*/
+
+  /* based on the layers of the atomposhere */
+  /* https://en.wikipedia.org/wiki/Atmosphere_of_Earth */
+  --mesosphere: 0 5px 12px hsla(0, 0%, 0%, 0.4),
+    0 18px 32px hsla(0, 0%, 0%, 0.16);
+  --stratosphere: 0 2px 3px hsla(0, 0%, 0%, 0.12),
+    0 3px 6px hsla(0, 0%, 0%, 0.14);
+  --troposphere: 0 2px 3px hsla(0, 0%, 0%, 0.12),
+    0 3px 6px hsla(0, 0%, 0%, 0.14);
+}

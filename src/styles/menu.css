@@ -1,0 +1,13 @@
+/*------------------------------------*/
+/* #MENU */
+/*------------------------------------*/
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  z-index: 1;
+  position: relative;
+}

@@ -1,0 +1,35 @@
+---
+import Header from "../components/header.astro"
+import Footer from "../components/footer.astro"
+import { Meta } from "../components/meta"
+---
+<Header />
+<main>
+  <article class="triad">
+    <section class="one-two">
+
+      <h2>Broken Screen Replacement</h2>
+      <p>We&apos;re committed to providing our customers with the excellent  service they deserve. When you enlist our help to replace your broken  window screens, you&apos;ll benefit from our impressive work ethic and quick  turnaround. And because we value your business, we go out of our way to  keep our rates as reasonable as possible.</p>
+      <p>Are your window screens damaged, missing, dented, or broken? Have  they become so clogged with grime and debris that they&apos;re making your  windows look unsightly. You don&apos;t have to struggle with old, banged-up  window screens any longer. At Jarrod Semmens Window Cleaning, we offer  broken screen replacement services for commercial and residential  customers in Tahoe City, CA.</p>
+    </section>
+  </article>
+
+
+  <article class="triad">
+    <section class="one-two">
+      <h3>At Your Service</h3>
+      <p>At Jarrod Semmens Window Cleaning, we&apos;re committed to providing our  customers with the excellent service they deserve. When you enlist our  help to replace your broken window screens, you&apos;ll benefit from our  impressive work ethic and quick turnaround. And because we value your  business, we go out of our way to keep our rates as reasonable as  possible.</p>
+      <p>Improve your property with a new set of window screens. For more information or to request an estimate, call us today.</p>
+    </section>
+  </article>
+
+  <article class="triad">
+    <section class="one-two">
+      <h3>We make our screens at</h3>
+      {Meta.screenFaciliity.streetAddress}<br />
+      {Meta.screenFaciliity.addressLocality}, {Meta.screenFaciliity.addressRegion} {Meta.screenFaciliity.postalCode}
+    </section>
+  </article>
+</main>
+<Footer />
+

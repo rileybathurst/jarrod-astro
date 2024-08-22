@@ -1,0 +1,108 @@
+/*------------------------------------*/
+/* #TYPOGRAPHY */
+/*------------------------------------*/
+
+/* https://type-scale.com 1.2 minor third */
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+  /* browser reset */
+
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: italic;
+  margin-block-start: 0;
+}
+
+h1,
+.freel {
+  font-size: var(--freel);
+  line-height: 1.6;
+}
+
+h2,
+.jobs {
+  font-size: var(--jobs);
+}
+
+h3,
+.rose {
+  font-size: var(--rose);
+  line-height: calc(var(--rose) * 1.5);
+}
+
+h4,
+.houghton {
+  font-size: var(--houghton);
+}
+
+h5,
+.relay {
+  font-size: var(--relay);
+}
+
+h6,
+.stevens {
+  font-size: var(--stevens);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  margin-block-end: 1.6rem;
+}
+
+small,
+.tamarack {
+  font-size: var(--tamarack);
+}
+
+@media (min-width: 30rem) {
+  .end {
+    text-align: right;
+  }
+}
+
+blockquote {
+  font-style: italic;
+  max-width: var(--neptune);
+  margin-inline: auto;
+  margin-block: var(--freel);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--houghton);
+}
+
+address {
+  line-height: 1.5;
+  /* reset */
+  font-style: normal;
+}
+
+.br__earth-visible {
+  display: none;
+  @media (min-width: 30rem) {
+    display: initial;
+  }
+}
+
+.longline {
+  /* * the email is just really long so trying to make it fit without it being too obvious */
+  font-size: clamp(var(--tamarack), 1.667vw, var(--stevens));
+}
+
+:is(.hero, .sidekick) h2 {
+  font-size: clamp(var(--houghton), 1.667vw, var(--jobs));
+}
+
+blockquote h3 {
+  font-size: clamp(var(--houghton), 1.667vw, var(--jobs));
+}

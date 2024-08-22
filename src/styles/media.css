@@ -1,0 +1,63 @@
+/*------------------------------------*/
+/* #MEDIA */
+/*------------------------------------*/
+
+/*------------------------------------*/
+/* #SVG */
+/*------------------------------------*/
+
+svg {
+  width: 100%;
+  max-width: var(--freel);
+  max-height: var(--freel);
+  fill: currentColor;
+  margin-block: 1.6rem;
+}
+
+.svg__backer {
+  fill: none;
+}
+
+.yelp {
+  /* specifically not a variable */
+  fill: #d32323;
+}
+
+.yelp__link:hover .yelp {
+  /* specifically not a variable */
+  /* TODO: check the contrast */
+  fill: red;
+}
+
+.svg-lines {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1px;
+  max-width: var(--mercury);
+  max-height: 15rem;
+}
+
+.trees {
+  @media (prefers-color-scheme: dark) {
+    mix-blend-mode: multiply;
+  }
+}
+
+.tree-lines {
+  svg {
+    max-width: var(--mercury);
+    max-height: var(--mercury);
+    fill: none;
+    stroke: currentColor;
+    /* variable */
+    stroke-width: 2px;
+  }
+}
+
+.squeegee {
+  svg {
+    display: block;
+    margin: 0;
+    stroke-width: 4px;
+  }
+}

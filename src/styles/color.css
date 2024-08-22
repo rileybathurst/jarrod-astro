@@ -1,0 +1,128 @@
+/*------------------------------------*/
+/* #COLOR */
+/*------------------------------------*/
+
+body {
+  background-color: var(--presence-100);
+  color: var(--abscence-100);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--abscence-100);
+    color: var(--prescence-100);
+  }
+}
+
+/*------------------------------------*/
+
+header {
+  .header__logo svg {
+    fill: var(--prescence-200);
+  }
+
+  .cartoon {
+    background-color: var(--sunshine-100);
+    border: 4px solid var(--prescence-200);
+
+    @media (prefers-color-scheme: dark) {
+      border-color: var(--abscence-200);
+    }
+  }
+}
+
+/*------------------------------------*/
+
+.squeegee {
+  mix-blend-mode: multiply;
+
+  @media (prefers-color-scheme: dark) {
+    stroke: var(--abscence-400);
+    mix-blend-mode: screen;
+  }
+}
+
+.sidekick {
+  article,
+  blockquote {
+    background-color: var(--prescence-100);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--abscence-200);
+    }
+  }
+}
+
+/*------------------------------------*/
+
+.footer__stripe {
+  background-color: var(--sunshine-100);
+  border-block: 1px solid var(--sunshine-200);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--sunshine-300);
+    border-color: var(--sunshine-400);
+    color: var(--abscence-100);
+  }
+}
+
+.footer__list :is(p, address, ul > li, .yelp__link) {
+  border-color: var(--sunshine-100);
+
+  @media (prefers-color-scheme: dark) {
+    border-color: var(--pine-400);
+  }
+}
+
+/*------------------*/
+/* #MENU */
+/*------------------*/
+
+.menu-content {
+  background-color: var(--prescence-100);
+  box-shadow: 0 0 0 100vmax var(--prescence-100);
+  clip-path: inset(0 -100vmax);
+}
+
+/*------------------------------------*/
+
+.footer__list .one-two {
+  @media (prefers-color-scheme: dark) {
+    border-color: hsl(var(--pine-hs), calc(var(--pine-l) - 10%));
+  }
+}
+
+.hero__wrapper {
+  @media (prefers-color-scheme: dark) {
+    border-color: var(--precense-100);
+  }
+
+  .hero__wrapper--start,
+  .hero__wrapper--end {
+    @media (min-width: 52rem) {
+      border-color: var(--abscence-100);
+
+      @media (prefers-color-scheme: dark) {
+        border-color: var(--prescence-200);
+      }
+    }
+  }
+}
+
+.hero__background {
+  background-color: var(--prescence-100);
+}
+
+.cleaner__wrapper {
+  border-color: var(--abscence-100);
+
+  @media (prefers-color-scheme: dark) {
+    border-color: var(--prescence-200);
+  }
+}
+
+.squeegee__line {
+  border-color: var(--abscence-100);
+
+  @media (prefers-color-scheme: dark) {
+    border-color: var(--prescence-200);
+  }
+}
