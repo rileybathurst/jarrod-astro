@@ -27,20 +27,23 @@
   --sunshine-300: oklch(80% 0.15 80);
   --sunshine-400: oklch(70% 0.2 70);
 
+  /* * testing this expression for alpha */
+  --sunshine-100-a-1: oklch(90% 0.065 80 / 0.1);
+
   /*------------------------------------*/
   /* #NEUTRALS */
   /*------------------------------------*/
   /* * Trying a new idea here */
 
-  --prescence-100: hsl(0, 0%, 97.5%);
-  --prescence-200: hsl(0, 0%, 87.5%);
-  --prescence-300: hsl(0, 0%, 80%);
-  --prescence-400: hsl(0, 0%, 75%);
+  --neutral-100: hsl(0, 0%, 97.5%);
+  --neutral-200: hsl(0, 0%, 87.5%);
+  --neutral-300: hsl(0, 0%, 80%);
+  --neutral-400: hsl(0, 0%, 75%);
+  --neutral-500: hsl(0, 0%, 25%);
+  --neutral-600: hsl(0, 0%, 20%);
+  --neutral-700: hsl(0, 0%, 12.5%);
+  --neutral-800: hsl(0, 0%, 2.5%);
 
-  --abscence-400: hsl(0, 0%, 25%);
-  --abscence-300: hsl(0, 0%, 20%);
-  --abscence-200: hsl(0, 0%, 12.5%);
-  --abscence-100: hsl(0, 0%, 2.5%);
 
   /*------------------------------------*/
   /* #TYPOGRAPHY */

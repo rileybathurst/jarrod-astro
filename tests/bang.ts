@@ -1,13 +1,15 @@
 // check-for-bang.js
 // Script to check for the string "// !" in project files and exit with error if found
 
-import fs from 'node:fs';
-import path from 'node:path';
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from 'node:url';
+import { URL } from 'node:url';
 
-const exts = ['.js', '.ts', '.astro', '.css', '.tsx'];
-const rootDir = path.resolve(new URL('.', import.meta.url).pathname, 'src');
-const publicDir = path.resolve(new URL('.', import.meta.url).pathname, 'public');
-
+const exts = [".js", ".ts", ".astro", ".css", ".tsx"];
+// Use CommonJS __dirname directly
+const rootDir = path.resolve(fileURLToPath(new URL('..', import.meta.url)), "src");
+const publicDir = path.resolve(fileURLToPath(new URL('.', import.meta.url)), "public");
 
 function walk(dir: string): string[] {
   let results: string[] = [];
@@ -27,11 +29,11 @@ function walk(dir: string): string[] {
 function checkFiles(files: string[]): boolean {
   let found: boolean = false;
   files.forEach((file: string) => {
-    const content: string = fs.readFileSync(file, 'utf8');
+    const content: string = fs.readFileSync(file, "utf8");
     if (
-      content.includes('// !') ||
-      content.includes('<!-- !') ||
-      content.includes('{/* !')
+      content.includes("// !") ||
+      content.includes("<!-- !") ||
+      content.includes("{/* !")
     ) {
       console.error(`Forbidden string found in: ${file}`);
       found = true;
@@ -47,5 +49,5 @@ const allFiles = srcFiles.concat(publicFiles);
 if (checkFiles(allFiles)) {
   process.exit(1);
 } else {
-  console.log('No forbidden string found.');
+  console.log("No forbidden string found.");
 }

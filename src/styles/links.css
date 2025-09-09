@@ -27,10 +27,11 @@ button {
   box-shadow: var(--troposphere);
 
   @media (prefers-color-scheme: dark) {
-    background-color: var(--abscence-100);
+    background-color: var(--neutral-800);
     box-shadow: var(--stratosphere);
     color: var(--mercury);
-    border: 2px solid var(--abscence-200) !important;
+    /* TODO: document why its important */
+    border: 2px solid var(--neutral-700) !important;
   }
 }
 
@@ -41,17 +42,17 @@ button {
   border-radius: 0.25rem;
   transition: var(--hover-timing);
   text-decoration: none;
-  color: hsl(var(--pine-hs), calc(var(--pine-l) - 5%));
+  color: var(--pine-300);
 
   @media (prefers-color-scheme: dark) {
-    color: var(--prescence-200);
+    color: var(--neutral-200);
   }
 }
 
 /* TODO: focus */
 .large_menu a:hover {
   text-decoration: underline;
-  background-color: var(--silver);
+  background-color: var(--neutral-400);
 
   @media (prefers-color-scheme: dark) {
     background-color: hsl(var(--pine-hs), calc(var(--pine-l) - 13%));
@@ -133,7 +134,7 @@ header svg:where(:hover, :focus) {
 }
 
 .footer__stripe a {
-  color: hsl(var(--pine-hs), calc(var(--pine-l) - 10%));
+  /* color: hsl(var(--pine-hs), calc(var(--pine-l) - 10%)); */
   transition: var(--hover-timing);
 
   @media (prefers-color-scheme: dark) {

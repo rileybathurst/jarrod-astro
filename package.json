@@ -1,18 +1,19 @@
 {
   "name": "jarrod-astro",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Riley Bathurst <riley@rileybathurst.com> (https://rileybathurst.com)",
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node check-for-bang.ts && tsc --noEmit && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "npx @biomejs/biome format --write",
     "typecheck": "tsc --noEmit",
-    "find": "node check-for-bang.ts"
+    "build": "npm run lint && npm run typecheck && astro check && astro check && astro build",
+    "bang": "node ./tests/bang.ts"
+
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -20,6 +21,7 @@
     "typescript": "^5.9.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.3"
+    "@biomejs/biome": "2.2.3",
+    "stay-gold": "^1.0.1"
   }
 }
