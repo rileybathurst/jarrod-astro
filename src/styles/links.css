@@ -73,7 +73,8 @@ header svg:where(:hover, :focus) {
 
 .page-title a {
   padding-block: var(--tamarack);
-  box-shadow: var(--tamarack) 0 0 transparent,
+  box-shadow:
+    var(--tamarack) 0 0 transparent,
     calc(var(--tamarack) - var(--tamarack) * 2) 0 0 transparent;
   transition: var(--hover-timing);
   border-radius: var(--tamarack);
@@ -91,10 +92,10 @@ header svg:where(:hover, :focus) {
   @media (prefers-color-scheme: dark) {
     /* TODO this contrast is nowhere near strong enough */
     background-color: hsl(var(--pine-hs), calc(var(--pine-l) - 16%));
-    box-shadow: var(--tamarack) 0 0
-        hsl(var(--pine-hs), calc(var(--pine-l) - 16%)),
+    box-shadow:
+      var(--tamarack) 0 0 hsl(var(--pine-hs), calc(var(--pine-l) - 16%)),
       calc(var(--tamarack) - var(--tamarack) * 2) 0 0
-        hsl(var(--pine-hs), calc(var(--pine-l) - 16%));
+      hsl(var(--pine-hs), calc(var(--pine-l) - 16%));
   }
 }
 
