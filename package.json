@@ -2,6 +2,8 @@
   "name": "jarrod-astro",
   "type": "module",
   "version": "0.0.1",
+  "author": "Riley Bathurst <riley@rileybathurst.com> (https://rileybathurst.com)",
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,8 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.14.4",
-    "@astrojs/check": "^0.9.3",
-    "typescript": "^5.5.4"
+    "astro": "^5.13.7",
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.9.2"
   }
 }
