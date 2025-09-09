@@ -7,9 +7,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "node check-for-bang.ts && tsc --noEmit && astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "npx @biomejs/biome format --write",
+    "typecheck": "tsc --noEmit",
+    "find": "node check-for-bang.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
