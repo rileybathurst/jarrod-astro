@@ -4,18 +4,15 @@
 
 a {
   color: var(--pine-200);
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--pine-200);
-  }
 }
 
 a:hover {
-  color: var(--pine-200);
+  color: var(--pine-300);
   text-decoration: none;
-  @media (prefers-color-scheme: dark) {
-    color: var(--pine-300);
-  }
+}
+
+a:focus {
+  color: var(--pine-400);
 }
 
 button {
@@ -25,11 +22,11 @@ button {
   font-family: var(--font-sans);
   font-weight: 400;
   box-shadow: var(--troposphere);
+  color: var(--pine-200);
 
   @media (prefers-color-scheme: dark) {
     background-color: var(--neutral-800);
     box-shadow: var(--stratosphere);
-    color: var(--mercury);
     /* TODO: document why its important */
     border: 2px solid var(--neutral-700) !important;
   }
