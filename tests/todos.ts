@@ -11,31 +11,31 @@ const rootDir = path.resolve(__dirname, "src");
 const publicDir = path.resolve(__dirname, "public");
 
 function walk(dir: string): string[] {
-    let results: string[] = [];
-    const list: string[] = fs.readdirSync(dir);
-    list.forEach((file: string) => {
-        const filePath: string = path.join(dir, file);
-        const stat: fs.Stats = fs.statSync(filePath);
-        if (stat?.isDirectory()) {
-        results = results.concat(walk(filePath));
-        } else if (exts.includes(path.extname(file))) {
-        results.push(filePath);
-        }
-    });
-    return results;
+  let results: string[] = [];
+  const list: string[] = fs.readdirSync(dir);
+  list.forEach((file: string) => {
+    const filePath: string = path.join(dir, file);
+    const stat: fs.Stats = fs.statSync(filePath);
+    if (stat?.isDirectory()) {
+      results = results.concat(walk(filePath));
+    } else if (exts.includes(path.extname(file))) {
+      results.push(filePath);
+    }
+  });
+  return results;
 }
 
 function checkTodos(files: string[]): number {
-    let totalCount = 0;
-    files.forEach((file: string) => {
-        const content: string = fs.readFileSync(file, "utf8");
-        const matches = content.match(/TODO:/g);
-        if (matches && matches.length > 0) {
-        console.log(`Found ${matches.length} TODO(s) in: ${file}`);
-        totalCount += matches.length;
-        }
-    });
-    return totalCount;
+  let totalCount = 0;
+  files.forEach((file: string) => {
+    const content: string = fs.readFileSync(file, "utf8");
+    const matches = content.match(/TODO:/g);
+    if (matches && matches.length > 0) {
+      console.log(`Found ${matches.length} TODO(s) in: ${file}`);
+      totalCount += matches.length;
+    }
+  });
+  return totalCount;
 }
 
 const srcFiles = walk(rootDir);
@@ -45,8 +45,8 @@ const allFiles = srcFiles.concat(publicFiles);
 const todoCount = checkTodos(allFiles);
 
 if (todoCount > 0) {
-    console.warn(`Total TODOs found: ${todoCount}`);
-    process.exit(1);
+  console.warn(`Total TODOs found: ${todoCount}`);
+  process.exit(1);
 } else {
-    console.log("No TODOs found.");
+  console.log("No TODOs found.");
 }

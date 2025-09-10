@@ -8,9 +8,10 @@ import "../styles/app.css";
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <meta name="theme-color" content="oklch(50% 0.125 150)" />
 		<title>{Meta.title}</title>
 	</head>
   <body>
@@ -21,9 +22,9 @@ import "../styles/app.css";
         </a>
       </h1>
       <img
-      src="https://jarrodsemmenswindowcleaning.s3.us-west-1.amazonaws.com/adam-vradenburg-_gu7E90QChU-unsplash-compressed.jpg"
-      alt="pine tree forrest texture"
-      class="forrest"
+        src="https://jarrodsemmenswindowcleaning.s3.us-west-1.amazonaws.com/adam-vradenburg-_gu7E90QChU-unsplash-compressed.jpg"
+        alt="pine tree forrest texture"
+        class="forrest"
       />
       <div class="header__container">
         <a
@@ -100,6 +101,5 @@ import "../styles/app.css";
     <h3 class="page-title">
       <a href={`tel:${Meta.phoneRaw}`}>
         Call Today For A Free Estimate! {Meta.phoneFormatted}
-        <!-- {meta.phone} -->
       </a>
     </h3>

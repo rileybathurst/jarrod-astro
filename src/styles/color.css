@@ -64,11 +64,12 @@ header {
   }
 }
 
-.footer__list :is(p, address, ul > li, .yelp__link) {
-  border-color: var(--sunshine-100);
+/* * saves the border-bottom-color from needing an important */
+.yelp__link {
+  color: var(--neutral-700);
 
   @media (prefers-color-scheme: dark) {
-    border-color: var(--pine-300);
+    color: var(--neutral-200);
   }
 }
 
@@ -77,9 +78,14 @@ header {
 /*------------------*/
 
 .menu-content {
-  background-color: var(--neutral-100);
-  box-shadow: 0 0 0 100vmax var(--neutral-100);
+  background-color: var(--neutral-200);
+  box-shadow: 0 0 0 100vmax var(--neutral-200);
   clip-path: inset(0 -100vmax);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--neutral-700);
+    box-shadow: 0 0 0 100vmax var(--neutral-700);
+  }
 }
 
 /*------------------------------------*/
@@ -109,6 +115,10 @@ header {
 
 .hero__background {
   background-color: var(--neutral-100);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--neutral-700);
+  }
 }
 
 .cleaner__wrapper {

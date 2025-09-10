@@ -28,22 +28,30 @@
   --sunshine-400: oklch(70% 0.2 70);
 
   /* * testing this expression for alpha */
-  --sunshine-100-a-1: oklch(90% 0.065 80 / 0.1);
+  --sunshine-300-a-1: oklch(80% 0.15 80 / 0.5);
 
   /*------------------------------------*/
   /* #NEUTRALS */
   /*------------------------------------*/
   /* * Trying a new idea here */
 
-  --neutral-100: hsl(0, 0%, 97.5%);
+  /*   --neutral-100: hsl(0, 0%, 97.5%);
   --neutral-200: hsl(0, 0%, 87.5%);
   --neutral-300: hsl(0, 0%, 80%);
   --neutral-400: hsl(0, 0%, 75%);
   --neutral-500: hsl(0, 0%, 25%);
   --neutral-600: hsl(0, 0%, 20%);
   --neutral-700: hsl(0, 0%, 12.5%);
-  --neutral-800: hsl(0, 0%, 2.5%);
+  --neutral-800: hsl(0, 0%, 2.5%); */
 
+  --neutral-100: #f9f9f9;
+  --neutral-200: #ebebeb;
+  --neutral-300: #d9d9d9;
+  --neutral-400: #bfbfbf;
+  --neutral-500: #404040;
+  --neutral-600: #262626;
+  --neutral-700: #121212;
+  --neutral-800: #050505;
 
   /*------------------------------------*/
   /* #TYPOGRAPHY */

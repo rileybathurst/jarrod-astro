@@ -202,20 +202,6 @@ header {
 /* #PAGE */
 /*------------------------------------*/
 
-.page-title {
-  /* TODO: not a layout feature */
-  font-size: var(--rose);
-  max-width: var(--neptune);
-  margin-inline: auto;
-  margin-block-end: var(--freel);
-  padding-inline: var(--stevens);
-
-  @media (min-width: 30rem) {
-    /* TODO not a layout feature */
-    font-size: var(--jobs);
-  }
-}
-
 /*------------------------------------*/
 /* #FOOTER */
 /*------------------------------------*/
@@ -278,7 +264,7 @@ footer nav ul {
     place-items: center;
     /* offset by footer__stripe */
     margin-block: -1rem;
-    background: var(--sunshine-100-a-1);
+    background: var(--sunshine-300-a-1);
     border: 1px solid var(--sunshine-100);
     grid-row: 2;
     grid-column: 1;
@@ -291,7 +277,7 @@ footer nav ul {
 
     @media (prefers-color-scheme: dark) {
       border: 1px solid var(--sunshine-400);
-      background: var(--sunshine-100-a-1);
+      background: var(--sunshine-300-a-1);
     }
 
     /* TODO: name */
@@ -303,13 +289,14 @@ footer nav ul {
       display: grid;
       place-items: center;
       border: 1px solid var(--sunshine-400);
-      background: var(--sunshine-100-a-1);
+      background: var(--sunshine-300-a-1);
 
       @media (prefers-color-scheme: dark) {
         border: 1px solid var(--sunshine-400);
-        background: var(--sunshine-100-a-1);
+        background: var(--sunshine-300-a-1);
       }
 
+      /* TODO: inception rule */
       svg {
         max-height: 6rem;
         max-width: 6rem;
@@ -319,11 +306,11 @@ footer nav ul {
         fill: var(--neutral-100);
 
         border: 1px solid var(--sunshine-400);
-        background: var(--sunshine-100-a-1);
+        background: var(--sunshine-300-a-1);
 
         @media (prefers-color-scheme: dark) {
           border: 1px solid var(--sunshine-400);
-          background: var(--sunshine-100-a-1);
+          background: var(--sunshine-300-a-1);
         }
       }
     }
@@ -342,16 +329,16 @@ footer nav ul {
   }
 }
 
-/* the text is 16px
-  + 1px border
-  + 15px padding block end
-  + 15px margin block end
-  16 + 1 + 15 + 15 = 48px */
-.footer__list :is(p, address, ul > li, .yelp__link) {
+.footer__list :is(p, address, ul > li, .yelp__wrapper) {
   padding-block-end: 1.5rem;
   margin-block-start: 0;
   margin-block-end: 1.5rem;
   border-bottom: 1px solid;
+  margin-inline-start: var(--stevens);
+
+  a {
+    margin-inline-start: calc(-1 * var(--stevens));
+  }
 }
 
 .footer__list .one-two {
@@ -362,14 +349,17 @@ footer nav ul {
 }
 
 /* TODO this is full width it doesnt really have to be */
-.yelp__link {
+.yelp__wrapper {
   width: calc(100% - calc(var(--tamarack) * 2));
   display: inline-block;
-  /* TODO: document why this has important */
-  border-radius: 0 !important;
 
-  svg {
-    margin-block: 0;
+  .yelp__link {
+    /* TODO: document why this has important */
+    border-radius: 0 !important;
+    
+    svg {
+      margin-block: 0;
+    }
   }
 }
 
@@ -529,10 +519,14 @@ footer nav ul {
     }
   }
 
+  blockquote,
+  article {
+    padding: var(--stevens);
+  }
+
   blockquote {
     grid-row: 2;
     grid-column: 1;
-    padding: var(--stevens);
     z-index: 1;
     position: relative;
     max-width: 85vw;
@@ -554,14 +548,11 @@ footer nav ul {
     z-index: 1;
     padding: var(--stevens);
     margin-inline: var(--tamarack);
-    padding-inline: var(--tamarack);
     box-shadow: var(--troposphere);
 
     @media (min-width: 30rem) {
       grid-row: 2 / 4;
       grid-column: 2 / 4;
-      /* TODO: check this */
-      padding-inline-start: 4rem;
     }
   }
 

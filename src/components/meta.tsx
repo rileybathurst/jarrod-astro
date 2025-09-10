@@ -8,6 +8,7 @@ export const Meta = {
   description:
     "Jarrod Semmens Window Cleaning is a locally owned and operated business that provides professional window cleaning services to residential and commercial customers in Tahoe City, CA.",
   email: "service@jarrodsemmenswindowcleaning.com",
+  WebSite: "https://www.jarrodsemmenswindowcleaning.com",
   phoneRaw: phone,
   phoneFormatted: formatted,
 

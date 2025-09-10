@@ -13,11 +13,12 @@
     "typecheck": "tsc --noEmit",
     "build": "npm run lint && npm run typecheck && astro check && astro check && astro build",
     "bang": "node ./tests/bang.ts"
-
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.5.1",
     "astro": "^5.13.7",
+    "astro-icon": "^1.1.5",
     "typescript": "^5.9.2"
   },
   "devDependencies": {

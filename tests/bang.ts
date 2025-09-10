@@ -3,13 +3,19 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from 'node:url';
-import { URL } from 'node:url';
+import { fileURLToPath } from "node:url";
+import { URL } from "node:url";
 
 const exts = [".js", ".ts", ".astro", ".css", ".tsx"];
 // Use CommonJS __dirname directly
-const rootDir = path.resolve(fileURLToPath(new URL('..', import.meta.url)), "src");
-const publicDir = path.resolve(fileURLToPath(new URL('.', import.meta.url)), "public");
+const rootDir = path.resolve(
+  fileURLToPath(new URL("..", import.meta.url)),
+  "src",
+);
+const publicDir = path.resolve(
+  fileURLToPath(new URL(".", import.meta.url)),
+  "public",
+);
 
 function walk(dir: string): string[] {
   let results: string[] = [];

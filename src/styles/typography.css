@@ -57,7 +57,12 @@ h6,
   font-weight: 400;
   font-style: normal;
   line-height: 1.5;
-  margin-block-end: 1.6rem;
+  margin-block-end: var(--rose);
+}
+
+p, li, address {
+  font-weight: 300;
+  line-height: 1.35;
 }
 
 small,
@@ -87,7 +92,7 @@ address {
   font-style: normal;
 }
 
-.br__earth-visible {
+.br__venus-visible {
   display: none;
   @media (min-width: 30rem) {
     display: initial;
@@ -105,4 +110,37 @@ address {
 
 blockquote h3 {
   font-size: clamp(var(--houghton), 1.667vw, var(--jobs));
+}
+
+.page-title {
+  font-size: var(--rose);
+  max-width: var(--neptune);
+  margin-inline: auto;
+  margin-block-end: var(--freel);
+  padding-inline: var(--stevens);
+
+  /* ? should this be a clamp */
+  @media (min-width: 30rem) {
+    font-size: var(--jobs);
+  }
+}
+
+/*------------------------------------*/
+/* #PAGE TITLE */
+/*------------------------------------*/
+
+.page-title a {
+  padding-block: var(--tamarack);
+  transition: var(--hover-timing);
+  border-radius: var(--tamarack);
+  line-height: var(--freel);
+}
+
+.page-title a:where(:hover, :focus) {
+  background-color: var(--neutral-200);
+  
+  @media (prefers-color-scheme: dark) {
+    /* TODO this contrast is nowhere near strong enough */
+    background-color: var(--pine-100);
+  }
 }
