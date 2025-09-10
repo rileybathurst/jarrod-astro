@@ -12,6 +12,18 @@ import "../styles/app.css";
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
     <meta name="theme-color" content="oklch(50% 0.125 150)" />
+    
+    <meta name="description" content={Meta.description} />
+    <meta name="keywords" content={Meta.keywords.join(", ")} />
+    <meta name="image" content={Meta.image} />
+
+    <meta property="og:title" content={Meta.title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Meta.WebSite} />
+    <meta property="og:image" content={Meta.image} />
+    <meta property="og:description" content={Meta.description} />
+    <meta property="og:locale" content="en_US" />
+
 		<title>{Meta.title}</title>
 	</head>
   <body>

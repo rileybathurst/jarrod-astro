@@ -3,6 +3,7 @@ import MenuList from "./menu-list.astro";
 import { Meta } from "./meta";
 import TreelinesSVG from "../images/tree-lines.astro";
 import TahoeSvg from "../images/tahoe.astro";
+import Seo from "./seo.astro";
 ---
 
 <footer>
@@ -74,19 +75,4 @@ import TahoeSvg from "../images/tahoe.astro";
 </body>
 </html>
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "{Meta.address.addressLocality}",
-      "addressRegion": "{Meta.address.addressRegion}",
-      "postalCode": "{Meta.address.postalCode}",
-      "streetAddress": "{Meta.address.streetAddress}"
-    },
-    "name": "{Meta.title}",
-    "telephone": "{Meta.phoneFormatted}",
-    "url": "{Meta.WebSite}"
-  }
-  </script>
+<Seo />

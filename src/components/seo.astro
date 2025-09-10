@@ -1,0 +1,27 @@
+---
+import { Meta } from "./meta";
+---
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{Meta.address.addressLocality}",
+        "addressRegion": "{Meta.address.addressRegion}",
+        "postalCode": "{Meta.address.postalCode}",
+        "streetAddress": "{Meta.address.streetAddress}"
+        },
+        "name": "{Meta.title} in {Meta.address.addressLocality}, {Meta.address.addressRegion}",
+        "telephone": "{Meta.phoneFormatted}",
+        "url": "{Meta.WebSite}",
+        "image": "{Meta.image}",
+        "description": "{Meta.description}",
+        "email": "{Meta.email}",
+        "openingHours": "{Meta.openingHours}",
+        "faxNumber": "{Meta.faxNumber}",
+        "slogan": "{Meta.slogan}",
+        "areaServed": "{Meta.areaServed.join(", ")}"
+    }
+</script>
