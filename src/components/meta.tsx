@@ -13,8 +13,8 @@ export const Meta = {
   phoneFormatted: formatted,
 
   address: {
-    streetAddress: "PO Box 7614",
-    addressLocality: "Tahoe City",
+    streetAddress: "PO Box 219",
+    addressLocality: "Carnelian Bay",
     addressRegion: "CA",
     postalCode: 96145,
   },
